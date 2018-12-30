@@ -62,7 +62,7 @@
             "    }",
             "}"
         ],
-        "description": "Create DbContext class from the Entity Framework Core."
+        "description": "Create Context class of DbContext"
     },
     "DbContext-OnModelCreating": {
         "prefix": "ef-onmodelcreating",
