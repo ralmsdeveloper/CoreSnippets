@@ -1,7 +1,7 @@
 {
     "name": "coresnippets",
     "displayName": "Your .NET Core Development Helper",
-    "description": "Productivity for your ASP.NET Core projects in Visual Studio code",
+    "description": "Productivity for your ASP.NET Core projects in Visual Studio Code",
     "version": "0.0.1",
     "publisher": "ralmsdeveloper",
     "repository": {
