@@ -1,11 +1,45 @@
 {
+    "AspnetCore-Controller": {
+        "prefix": "aspnetcore-new-controller",
+        "body": 
+        [
+            "using System;",
+            "using System.Collections.Generic;",
+            "using System.Diagnostics;",
+            "using System.Linq;",
+            "using System.Threading.Tasks;",
+            "using Microsoft.AspNetCore.Mvc;",
+            "",
+            "namespace ${1:Namespace}.Controllers",
+            "{",
+            "    public class ${2:ControllerName}Controller : Controller",
+            "    {",
+            "        public IActionResult Index()",
+            "        {",
+            "            return View();",
+            "        }",
+            "",
+            "        public IActionResult Privacy()",
+            "        {",
+            "            return View();",
+            "        }",
+            "",
+            "        [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]",
+            "        public IActionResult Error()",
+            "        {",
+            "            return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });",
+            "        }",
+            "    }",
+            "}"            
+        ],
+		"description": "Create empty controller"
+	},
     "DbContext": {
-        "prefix": "efcore-context",
+        "prefix": "ef-context",
         "body": 
         [
             "using System;",
             "using Microsoft.EntityFrameworkCore;",
-            "using Microsoft.Extensions.Logging;",
             "",
             "namespace ${1:Data}",
             "{",
@@ -30,24 +64,26 @@
         ],
         "description": "Create DbContext class from the Entity Framework Core."
     },
-    "DbContext OnModelCreating": {
-        "prefix": "onmodelcreating",
+    "DbContext-OnModelCreating": {
+        "prefix": "ef-onmodelcreating",
         "body": 
         [
             "protected override void OnModelCreating(ModelBuilder modelBuilder)",
             "{",
             "    base.OnModelCreating(modelBuilder);",
             "}"
-        ]
+        ],
+        "description": "Add OnConfiguring method in code"
     },
-    "DbContext OnConfiguring": {
-        "prefix": "onconfiguring",
+    "DbContext-OnConfiguring": {
+        "prefix": "ef-onconfiguring",
         "body": 
         [
             "protected override void OnConfiguring(DbContextOptionsBuilder optionBuilder)",
             "{",
             "    base.OnConfiguring(optionBuilder);",          
             "}"
-        ]
+        ],
+        "description": "Add OnModelCreating method in code"
     }
 }

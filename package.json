@@ -1,6 +1,6 @@
 {
     "name": "coresnippets",
-    "displayName": "Your .NET Core Development Helper",
+    "displayName": "CoreSnippets",
     "description": "Productivity for your ASP.NET Core projects in Visual Studio Code",
     "version": "0.0.1",
     "publisher": "ralmsdeveloper",
@@ -8,6 +8,10 @@
       "type": "git",
       "url": "https://github.com/ralmsdeveloper/coresnippets"
     },
+    "author": {
+        "name": "Rafael Almeida"
+    },
+    "icon": "img/ico.png", 
     "engines": {
       "vscode": "^0.0.1"
     },
