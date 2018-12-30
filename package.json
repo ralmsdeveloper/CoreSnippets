@@ -1,0 +1,25 @@
+{
+    "name": "coresnippets",
+    "displayName": "Your .NET Core Development Helper",
+    "description": "Productivity for your ASP.NET Core projects in Visual Studio code",
+    "version": "0.0.1",
+    "publisher": "ralmsdeveloper",
+    "repository": {
+      "type": "git",
+      "url": "https://github.com/ralmsdeveloper/coresnippets"
+    },
+    "engines": {
+      "vscode": "^0.0.1"
+    },
+    "categories": [
+      "Snippets"
+    ],
+    "contributes": {
+      "snippets": [
+        {
+          "language": "csharp",
+          "path": "./snippets/core.json"
+        }
+      ]
+    }
+  }

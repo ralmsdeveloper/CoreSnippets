@@ -1,0 +1,53 @@
+{
+    "DbContext": {
+        "prefix": "efcore-context",
+        "body": 
+        [
+            "using System;",
+            "using Microsoft.EntityFrameworkCore;",
+            "using Microsoft.Extensions.Logging;",
+            "",
+            "namespace ${1:Data}",
+            "{",
+            "",
+            "    public class ${2:Name}Context : DbContext",
+            "    {",
+            "", 
+            "        public ${2:Name}Context(DbContextOptions<${2:Name}Context> options)",
+            "            : base(options)",
+            "        {",
+            "        }",
+            "",
+            "        public DbSet<${3:Model}> ${4:Name} { get; set; }",
+            "",
+            "        protected override void OnModelCreating(ModelBuilder builder)",
+            "        {",
+            "            base.OnModelCreating(builder);",
+            "            $0",
+            "        }",
+            "    }",
+            "}"
+        ],
+        "description": "Create DbContext class from the Entity Framework Core."
+    },
+    "DbContext OnModelCreating": {
+        "prefix": "onmodelcreating",
+        "body": 
+        [
+            "protected override void OnModelCreating(ModelBuilder modelBuilder)",
+            "{",
+            "    base.OnModelCreating(modelBuilder);",
+            "}"
+        ]
+    },
+    "DbContext OnConfiguring": {
+        "prefix": "onconfiguring",
+        "body": 
+        [
+            "protected override void OnConfiguring(DbContextOptionsBuilder optionBuilder)",
+            "{",
+            "    base.OnConfiguring(optionBuilder);",          
+            "}"
+        ]
+    }
+}
